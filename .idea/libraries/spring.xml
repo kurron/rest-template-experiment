@@ -1,0 +1,48 @@
+<component name="libraryTable">
+  <library name="spring">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-aop-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-asm-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-aspects-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-beans-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-context-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-context-support-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-core-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-expression-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-instrument-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-instrument-tomcat-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-jdbc-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-jms-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-orm-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-oxm-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-struts-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-test-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-tx-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-web-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-webmvc-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-webmvc-portlet-3.1.3.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-aop-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-aspects-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-beans-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-context-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-context-support-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-core-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-expression-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-instrument-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-instrument-tomcat-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-jdbc-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-jms-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-orm-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-oxm-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-struts-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-test-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-tx-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-web-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-webmvc-3.1.3.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/spring-webmvc-portlet-3.1.3.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
