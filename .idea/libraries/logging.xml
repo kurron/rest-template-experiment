@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="logging">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/dependencies/jcl-over-slf4j-1.7.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/jul-to-slf4j-1.7.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/log4j-over-slf4j-1.7.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/logback-classic-1.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/logback-core-1.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/slf4j-api-1.7.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/slf4j-ext-1.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/build/dependencies/jcl-over-slf4j-1.7.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/jul-to-slf4j-1.7.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/log4j-over-slf4j-1.7.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/logback-classic-1.0.7-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/logback-core-1.0.7-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/slf4j-api-1.7.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/dependencies/slf4j-ext-1.7.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
