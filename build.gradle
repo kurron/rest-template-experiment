@@ -62,6 +62,7 @@ dependencies {
     runtime "org.slf4j:log4j-over-slf4j:${slf4jVersion}"
     runtime "ch.qos.logback:logback-classic:${logbackVersion}"
     runtime "ch.qos.logback:logback-core:${logbackVersion}"
+    runtime "org.apache.httpcomponents:httpclient:${httpComponentsVersion}"
 
     sourceArchives "org.codehaus.groovy:groovy-all:${groovyVersion}:sources"
     sourceArchives "org.springframework:spring-aop:${springFrameworkVersion}:sources"
@@ -94,6 +95,8 @@ dependencies {
     sourceArchives "ch.qos.logback:logback-core:${logbackVersion}:sources"
     sourceArchives "org.codehaus.jackson:jackson-mapper-asl:${jacksonVersion}:sources"
     sourceArchives "org.hamcrest:hamcrest-all:${hamcrestVersion}:sources"
+    sourceArchives "org.apache.httpcomponents:httpclient:${httpComponentsVersion}:sources"
+    sourceArchives "org.apache.httpcomponents:httpcore:${httpComponentsVersion}:sources"
 }
 
 task generateWrapper(type: Wrapper) {

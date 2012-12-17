@@ -33,6 +33,8 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/build/dependencies/logback-core-1.0.7.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/build/dependencies/slf4j-api-1.7.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/build/dependencies/slf4j-ext-1.7.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/build/dependencies/httpclient-4.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/build/dependencies/httpcore-4.2.2.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

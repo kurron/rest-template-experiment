@@ -10,6 +10,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="spring" level="project" />
     <orderEntry type="library" name="logging" level="project" />
+    <orderEntry type="library" name="httpclient" level="project" />
   </component>
 </module>
 
