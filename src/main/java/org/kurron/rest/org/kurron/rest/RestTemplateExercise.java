@@ -7,6 +7,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -32,7 +33,12 @@ public class RestTemplateExercise {
         }
         else
         {
-            RestOperations template = new RestTemplate();
+            final SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+            factory.setBufferRequestBody( false );
+            final int chunkSize = 1024 * 8;
+            factory.setChunkSize(chunkSize);
+            System.out.println( "Using a streaming POST with a chunk size of " + chunkSize + " bytes." );
+            RestOperations template = new RestTemplate(factory);
             URI uri = UriComponentsBuilder.newInstance().scheme( "http" ).host("192.168.254.47").port(80).path("LessonGin/publish.pl").build().toUri();
             final String file = args[0];
             Resource resource = new FileSystemResource( file );
