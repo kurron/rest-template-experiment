@@ -6,6 +6,7 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.BufferingClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
@@ -15,12 +16,10 @@ import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.URI;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -28,6 +27,21 @@ import java.util.Random;
  */
 public class RestTemplateExercise {
 
+    private static class ChunkableResource extends FileSystemResource
+    {
+        private ChunkableResource(File file) {
+            super(file);
+        }
+
+        private ChunkableResource(String path) {
+            super(path);
+        }
+
+        @Override
+        public long contentLength() throws IOException {
+            return -1;
+        }
+    }
     public static void main( final String[] args ) throws Exception
     {
         if ( 0 == args.length )
@@ -36,15 +50,23 @@ public class RestTemplateExercise {
         }
         else
         {
-/*
             final SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
             factory.setBufferRequestBody( false );
-            final int chunkSize = 1024 * 8;
-            factory.setChunkSize(chunkSize);
+            final int chunks;
+            if ( 1 == args.length )
+            {
+                chunks = 8;
+            }
+            else
+            {
+                chunks = Integer.parseInt( args[1] );
+            }
+            final int chunkSize = 1024 * chunks;
+            factory.setChunkSize( chunkSize );
             System.out.println( "Using a streaming POST with a chunk size of " + chunkSize + " bytes." );
-*/
 
-            final HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
+            //final HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
+
             RestOperations template = new RestTemplate(factory);
             URI uri = UriComponentsBuilder.newInstance().scheme( "http" ).host("192.168.254.47").port(80).path("LessonGin/publish.pl").build().toUri();
             final String file = args[0];
@@ -55,14 +77,20 @@ public class RestTemplateExercise {
                 System.out.println("About to send " + file + " which is " + resource.contentLength() + " bytes long.");
 
                 final HttpHeaders headers = new HttpHeaders();
+                headers.setContentLength( resource.contentLength() );
+                headers.setContentType( MediaType.APPLICATION_OCTET_STREAM );
                 headers.add( "operation", "put" );
                 headers.add( "directory", generateRandomDirectoryName() );
                 headers.add( "filename", generateRandomFileName() );
 
                 HttpEntity<Resource> request = new HttpEntity<>( resource, headers );
-                System.out.println( "Start "+ Calendar.getInstance().getTime().toString() );
+                final Date start = Calendar.getInstance().getTime();
+                System.out.println("Start " + start.toString());
                 URI location = template.postForLocation( uri, request );
-                System.out.println( "Stop "+ Calendar.getInstance().getTime().toString() );
+                final Date stop = Calendar.getInstance().getTime();
+                System.out.println("Stop " + stop.toString());
+                long duration = stop.getTime() - start.getTime();
+                System.out.println( "Duration: " + duration/1000 + " seconds" );
 
                 assert location != null;
                 System.out.println( "location = " + location );
